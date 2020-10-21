@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  background-color: rgb(87, 189, 130);
+  transition: background 0.5s ease;
+  position: relative;
+}
+.field-name,
+.field-password,
+.field-email{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  height: 40px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  
+}
+.field-name i,
+.field-password i,
+.field-email i,
+.field-finish i{
+  padding: 10px;
+  cursor: pointer;
+}
+.field-name input,
+.field-password input,
+.field-email input{
+  background: none;
+  border: none;
+  flex: 1;
+  height: 100%;
+  outline: none;
+}
+
+div.innactive{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%,-50%);
+}
+div.active{
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%,-50%);
+}
+
+@keyframes shake{
+  0%{
+    transform: translate(-50%,-50) rotate(0deg);
+  }
+  50%{
+    transform: translate(-50%,-50) rotate(30deg);
+  }
+  100%{
+    transform: translate(-50%,-50) rotate(0deg);
+  }
+}
+
+.field-finish{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(252, 252, 252);
+  height: 100px;
+  width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  font-size: 50px;
+  font-weight: 100;
+}
